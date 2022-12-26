@@ -1,0 +1,15 @@
+@import './base/vars';
+@import './base/mixins';
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background: grey;
+}

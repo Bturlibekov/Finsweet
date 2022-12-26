@@ -1,0 +1,24 @@
+.join {
+  width: 100%;
+}
+
+.join-block {
+  width: 100%;
+  max-width: 414px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.join-title {
+  margin-bottom: 16px;
+  color: $black;
+}
+
+.join-text {
+  margin-bottom: 32px;
+  color: $mediumGrey;
+}
+
+.join--btn {
+  padding: 16px 48px;
+}

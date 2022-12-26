@@ -1,0 +1,23 @@
+@import './base/vars';
+@import './base/mixins';
+
+.category__block {
+  max-width: 515px;
+  text-align: center;
+  margin: 0 auto 128px auto;
+  padding: 80px 0px;
+}
+
+.category__block-title {
+  margin-bottom: 16px;
+  color: $black;
+}
+
+.category__block-text {
+  margin-bottom: 32px;
+  color: $mediumGrey;
+}
+
+.category__block-caption {
+  color: $black;
+}

@@ -1,0 +1,17 @@
+@import './base/vars';
+@import './base/mixins';
+
+.btn {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: $sen;
+  line-height: 24 / 18 * 100%;
+  text-transform: capitalize;
+  transition: all 300ms ease 0s;
+  color: $black;
+  background: $yellow;
+
+  &:hover {
+    background: #EDC14A;
+  }
+}

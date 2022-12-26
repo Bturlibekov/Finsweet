@@ -1,0 +1,134 @@
+@import './base/vars';
+@import './base/mixins';
+
+.post {
+  width: 100%;
+}
+
+.post__inner {
+  width: 100%;
+  max-width: 768px;
+  margin: 128px auto 64px auto;
+}
+
+.post-item__profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.post-profile__avatar {
+  margin-right: 16px;
+}
+
+.post-profile__info {
+  position: relative;
+}
+
+.post__info-name {
+  opacity: 0.87;
+  color: $purple;
+}
+
+.post__info-data {
+  color: $mediumGrey;
+}
+
+.post__inner-title {
+  margin-bottom: 34px;
+  color: $black;
+}
+
+.post__inner-logo {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 8px;
+  }
+}
+
+.post__logo-title {
+  color: $black;
+}
+
+.post__img {
+  width: 100%;
+  min-height: 300px;
+  margin-bottom: 64px;
+  @include imageBackground(no-repeat, 25%, center);
+  background-image: url(../img/svg/loading.svg);
+}
+
+.post__body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 48px 0;
+}
+
+.post__body-content {
+  max-width: 843px;
+  margin: 0 auto;
+}
+
+.post__content-title {
+  margin-bottom: 16px;
+  color: $black;
+}
+
+.post__content-text {
+  color: $mediumGrey;
+}
+
+.post__content-list {
+  margin-top: 24px;
+}
+
+.post__list-item {
+  font-family: $sen;
+  list-style: disc;
+  list-style-position: inside;
+  color: $black;
+
+  &::marker {
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .post__inner {
+    margin: 90px auto 60px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .post__inner {
+    margin: 45px auto 45px auto;
+  }
+
+  .post__inner-title.title-1 {
+    font-size: 32px;
+  }
+
+  .post__img {
+    min-height: 100px;
+    margin-bottom: 32px;
+  }
+
+  .post__body {
+    grid-gap: 24px 0;
+  }
+
+  .post__content-title.title-2 {
+    font-size: 28px;
+  }
+
+  .post__content-text.body-1 {
+    font-size: 14px;
+  }
+
+  .post__list-item.title-4 {
+    font-size: 16px;
+  }
+
+}

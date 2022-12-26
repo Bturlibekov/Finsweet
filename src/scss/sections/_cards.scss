@@ -1,0 +1,155 @@
+@import './base/vars';
+@import './base/mixins';
+
+.cards {
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+.cards__header-title {
+  margin-bottom: 96px;
+  color: $black;
+}
+
+.cards-items {
+  width: 100%;
+  max-width: 1150px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 64px 0;
+}
+
+.cards-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.cards__item-img {
+  min-width: 490px;
+  min-height: 100px;
+  @include imageBackground(no-repeat, 50%, center);
+  background-image: url(../img/svg/loading.svg);
+}
+
+.cards__item-block {
+  margin-left: 32px;
+}
+
+.cards__item-heading {
+  margin-bottom: 20px;
+  color: $black;
+}
+
+.cards__item-title {
+  margin-bottom: 16px;
+  color: $black;
+}
+
+.cards__item-text {
+  color: $mediumGrey;
+}
+
+.cards__buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+}
+
+.cards__buttons-prev {
+  font-family: $sen;
+  margin-right: 17px;
+  cursor: pointer;
+  color: $mediumGrey;
+}
+
+.cards__buttons-next {
+  font-family: $sen;
+  cursor: pointer;
+  color: $black;
+}
+
+@media (max-width: 1023px) {
+  .cards__header-title {
+    margin-bottom: 60px;
+
+    &.title-1 {
+      font-size: 36px;
+    }
+  }
+
+  .cards-items {
+    grid-gap: 32px 0;
+  }
+
+  .cards__item-img {
+    min-width: 350px;
+  }
+
+  .cards__item-title.title-2 {
+    font-size: 28px;
+  }
+
+  .cards__item-text.body-1 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cards__header-title {
+    margin-bottom: 30px;
+
+    &.title-1 {
+      font-size: 28px;
+    }
+  }
+
+  .cards__item-img {
+    min-width: 280px;
+  }
+
+  .cards__item-block {
+    margin-left: 15px;
+  }
+
+  .cards__item-heading {
+    margin-bottom: 10px;
+
+    &.cap {
+      font-size: 12px;
+    }
+  }
+
+  .cards__item-title.title-2 {
+    font-size: 16px;
+  }
+
+  .cards__item-text.body-1 {
+    font-size: 12px;
+    line-height: 1.2em;
+  }
+}
+
+@media (max-width: 539px) {
+  .cards-item {
+    display: block;
+  }
+
+  .cards__item-img {
+    text-align: center;
+
+    img {
+      height: 150px;
+    }
+  }
+
+  .cards__item-title.title-2 {
+    line-height: 1.2em;
+  }
+
+  .cards__item-block {
+    text-align: center;
+    margin: 15px 0 0 0;
+    padding: 0 30px;
+  }
+}

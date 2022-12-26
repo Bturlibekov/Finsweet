@@ -1,0 +1,139 @@
+@import './base/vars';
+@import './base/mixins';
+
+.author {
+  width: 100%;
+
+  .container {
+    position: relative;
+    max-width: 1024px;
+  }
+}
+
+.author__body {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  grid-gap: 0 35px;
+  padding: 128px 0px 105px 0;
+}
+
+.author__body-img {
+  width: 251px;
+  height: 294px;
+  @include imageBackground(no-repeat, cover, center);
+}
+
+.author__body-block {
+  position: relative;
+}
+
+.author__block-title {
+  max-width: 669px;
+  margin-bottom: 24px;
+  color: $black;
+}
+
+.author__block-text {
+  max-width: 645px;
+  margin-bottom: 24px;
+  color: $mediumGrey;
+}
+
+.author__block-list {
+  display: flex;
+}
+
+.author__list-item {
+  margin-right: 16px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.author__item-link {
+  transition: all 300ms ease 0s;
+  color: $black;
+
+  &:hover {
+    color: $purple;
+  }
+}
+
+.info-line.--author {
+  max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .author__body {
+    padding: 90px 0 73px 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  .author__block-title.title-1 {
+    font-size: 32px;
+  }
+
+  .author__block-text.body-1 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .author__body {
+    padding: 60px 0 43px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .author__body {
+    grid-gap: 0 15px;
+  }
+
+  .author__body-img {
+    width: 175px;
+    height: 205px;
+  }
+
+  .author__block-title.title-1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .author__block-text.body-1 {
+    font-size: 10px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 540px) {
+  .author__body {
+    padding: 30px 0 23px 0;
+  }
+}
+
+@media (max-width: 539px) {
+  .author__body {
+    grid-template-columns: 1fr;
+    grid-gap: 15px 0;
+    text-align: center;
+  }
+
+  .author__body-img {
+    margin: 0 auto;
+  }
+
+  .author__body-block {
+    padding: 0 15px;
+  }
+
+  .author__block-list {
+    justify-content: center;
+  }
+
+  .author__block-text.body-1 {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,257 @@
+.testimonials {
+  width: 100%;
+}
+
+.testimonials-body {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 0 95px;
+  padding: 80px 110px 80px 175px;
+}
+
+.testimonials__block {
+  position: relative;
+  width: 100%;
+  max-width: 429px;
+}
+
+.testimonials-slider {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    display: block;
+    opacity: 0.6;
+    background-color: $mediumGrey;
+  }
+}
+
+.testimonials__block-heading {
+  margin-bottom: 12px;
+  color: $black;
+}
+
+.testimonials__block-title {
+  max-width: 345px;
+  margin-bottom: 16px;
+  color: $black;
+}
+
+.testimonials__block-text {
+  max-width: 349px;
+  color: $black;
+}
+
+.testimonials-slider {
+  overflow: hidden;
+}
+
+.testimonials-items {
+  display: flex;
+}
+
+.testimonials-item {
+  position: relative;
+  padding-left: 80px;
+}
+
+.testimonials-item__messages {
+  max-width: 469px;
+  font-family: $sen;
+  color: $black;
+}
+
+.testimonials-item__profile {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.testimonials-profile__avatar {
+  width: 48px;
+  height: 48px;
+}
+
+.testimonials-profile__info {
+  margin-left: 16px;
+}
+
+.testimonials__info-name {
+  color: $black;
+}
+
+.testimonials__info-address {
+  color: $mediumGrey;
+}
+
+.testimonials-arrows {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+}
+
+.testimonials-navigation-prev,
+.testimonials-navigation-next {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: $black;
+
+  span {
+    font-size: 16px;
+    display: flex;
+    color: $lightGrey;
+  }
+}
+
+.testimonials-navigation-prev {
+  margin-right: 24px;
+}
+
+.testimonials-navigation-prev.testimonials-navigation-disabled,
+.testimonials-navigation-next.testimonials-navigation-disabled {
+  transition: all 300ms ease 0s;
+  background-color: $lightGrey;
+
+  span {
+    transition: all 300ms ease 0s;
+    color: $black;
+  }
+}
+
+@media (max-width: 1309px) {
+  .testimonials-body {
+    padding: 80px 60px 80px 80px;
+  }
+
+  .testimonials-arrows {
+    bottom: 15px;
+  }
+
+  .testimonials-navigation-prev,
+  .testimonials-navigation-next {
+    width: 32px;
+    height: 32px;
+
+    span {
+      font-size: 12px;
+    }
+  }
+
+  .testimonials-navigation-prev {
+    margin-right: 12px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .testimonials-body {
+    grid-gap: 0 30px;
+    padding: 30px 30px 30px 30px;
+  }
+
+  .testimonials-item {
+    padding-left: 40px;
+  }
+
+  .testimonials-item__messages.title-4 {
+    font-size: 18px;
+  }
+
+  .testimonials__info-name.title-4 {
+    font-size: 16px;
+  }
+
+  .testimonials__info-address.body-1 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-body {
+    align-items: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .testimonials-body {
+    grid-template-columns: 1fr;
+    grid-gap: 30px 0;
+  }
+
+  .testimonials__block {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .testimonials__block-heading.cap {
+    font-size: 14px;
+  }
+
+  .testimonials__block-title {
+    max-width: 100%;
+    margin: 0 auto 15px auto;
+
+    &.title-2 {
+      font-size: 28px;
+    }
+  }
+
+  .testimonials-slider {
+    &::before {
+      width: 100%;
+      height: 1px;
+    }
+  }
+
+  .testimonials__block-text {
+    margin: 0 auto;
+  }
+
+  .testimonials-items {
+    padding-top: 30px;
+  }
+
+  .testimonials-item {
+    padding-left: 0px;
+  }
+
+  .testimonials-item__messages {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 539px) {
+  .testimonials-item__messages.title-4 {
+    font-size: 14px;
+  }
+
+  .testimonials-arrows {
+    bottom: 10px;
+  }
+}
+
+@media (max-width: 479px) {
+  .testimonials-body {
+    padding: 15px;
+  }
+
+  .testimonials__block-title.title-2 {
+    font-size: 20px;
+  }
+
+  .testimonials__block-text.body-1 {
+    font-size: 13px;
+    line-height: 1.3em;
+  }
+}

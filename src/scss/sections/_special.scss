@@ -1,0 +1,112 @@
+@import './base/vars';
+@import './base/mixins';
+
+.post {
+  width: 100%;
+}
+
+.post-body {
+  position: relative;
+}
+
+.post-img {
+  max-width: 949px;
+  height: 705px;
+  @include imageBackground(no-repeat, 100%, left);
+}
+
+.post-content {
+  width: 100%;
+  max-width: 706px;
+  max-height: 584px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 80px;
+  background-color: $light;
+}
+
+.post-heading {
+  margin-bottom: 24px;
+  color: $black;
+}
+
+.post-title {
+  margin-bottom: 16px;
+  color: $black;
+}
+
+.post-text {
+  margin-bottom: 32px;
+  color: $mediumGrey;
+}
+
+.post-btn {
+  padding: 16px 48px;
+}
+
+@media (max-width: 1024px) {
+  .post-img {
+    height: 555px;
+    background-size: cover;
+  }
+
+  .post-content {
+    max-width: 500px;
+    padding: 40px;
+  }
+
+  .post-title.title-1 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 767px) {
+  .post-img {
+    height: 455px;
+  }
+
+  .post-content {
+    max-width: 250px;
+    padding: 20px;
+  }
+
+  .post-title.title-1 {
+    font-size: 20px;
+  }
+
+  .post-text.body-1 {
+    font-size: 12px;
+  }
+
+  .post-btn.btn {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 479px) {
+  .post-img {
+    height: 375px;
+  }
+
+  .post-content {
+    padding: 10px;
+  }
+
+  .post-heading {
+    margin-bottom: 12px;
+  }
+
+  .post-heading.cap {
+    font-size: 12px;
+  }
+
+  .post-title.title-1 {
+    font-size: 18px;
+  }
+
+  .post-text.body-1 {
+    font-size: 10px;
+  }
+}
