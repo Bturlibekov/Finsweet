@@ -1,0 +1,3 @@
+# Finsweet
+
+npm i
