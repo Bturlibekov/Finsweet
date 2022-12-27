@@ -1410,6 +1410,8 @@ h6 {
   max-width: 128px;
   max-height: 128px;
   margin: 0 auto 20px auto;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .authors-user {
